@@ -1,0 +1,5 @@
+# Install GLFW.
+$ sudo pacman -S glfw-x11
+
+# Generate glad files.
+https://glad.dav1d.de/
