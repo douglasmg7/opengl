@@ -14,6 +14,7 @@ const unsigned int SCR_HEIGHT = 600;
 
 int main() {
     // Inint glfw.
+    fprintf(stderr, "Error initializing glfw.\n");
     if (!glfwInit()){
         fprintf(stderr, "Error initializing glfw.\n");
     }
@@ -43,12 +44,14 @@ int main() {
         return -1;
     }
 
+    // Color.
+    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+
     // Render loop.
     while(!glfwWindowShouldClose(window))
     {
         processInput(window);
 
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
